@@ -38,7 +38,7 @@ function Update(){
 	var nextDate = getNextJimmyDate()
 	document.getElementById("next-spawn-time").textContent = jimmyCanSpawn() ? "" : "The next time Jimmy can spawn is: " + nextDate.toLocaleString("default", {month: 'long'}) + ' ' + nextDate.getDate() + ' ' + nextDate.getFullYear()
 	document.getElementById("can-spawn").textContent = jimmyCanSpawn() ? "Jimmy can currently spawn" : "Jimmy cannot currently spawn"
-	document.getElementById("update-count").textContent = updateCount
+	//document.getElementById("update-count").textContent = updateCount
 	
 	updateCount++
 	//window.alert("okay")
