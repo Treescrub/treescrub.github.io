@@ -28,7 +28,7 @@ function getNextJimmyDate(){
 	return new Date(new Date(year, 0).setDate(day + (15 - ((year * 365 - 733616 + day) % 15)) + 1))
 }
 
-var updateInterval = 15 * 1000
+var updateInterval = 60 * 1000
 
 var updateCount = 0
 
@@ -36,8 +36,8 @@ function Update(){
 	setTimeout(Update, updateInterval)
 	
 	var nextDate = getNextJimmyDate()
-	document.getElementById("next-spawn-time").textContent = jimmyCanSpawn() ? "" : "The next time Jimmy can spawn is: " + nextDate.toLocaleString("default", {month: 'long'}) + ' ' + nextDate.getDate() + ' ' + nextDate.getFullYear()
-	document.getElementById("can-spawn").textContent = jimmyCanSpawn() ? "Jimmy can currently spawn" : "Jimmy cannot currently spawn"
+	document.getElementById("next-spawn-time").textContent = jimmyCanSpawn() ? "" : "The next time Jimmy Gibbs Jr. can spawn is: " + nextDate.toLocaleString("default", {month: 'long'}) + ' ' + nextDate.getDate() + ' ' + nextDate.getFullYear()
+	document.getElementById("can-spawn").textContent = jimmyCanSpawn() ? "Jimmy Gibbs Jr. can currently spawn" : "Jimmy Gibbs Jr. cannot currently spawn"
 	//document.getElementById("update-count").textContent = updateCount
 	
 	updateCount++
