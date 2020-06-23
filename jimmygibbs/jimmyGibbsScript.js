@@ -36,7 +36,8 @@ function Update(){
 	setTimeout(Update, updateInterval)
 	
 	var nextDate = getNextJimmyDate()
-	document.getElementById("next-spawn-time").textContent = jimmyCanSpawn() ? "" : "The next time Jimmy Gibbs Jr. can spawn is: " + nextDate.toLocaleString("default", {month: 'long'}) + ' ' + nextDate.getDate() + ' ' + nextDate.getFullYear()
+	document.getElementById("next-spawn-time-text").textContent = jimmyCanSpawn() ? "" : "The next time Jimmy Gibbs Jr. can spawn is "
+	document.getElementById("next-spawn-time").textContent = nextDate.toLocaleString("default", {month: 'long'}) + ' ' + nextDate.getDate() + ' ' + nextDate.getFullYear()
 	document.getElementById("can-spawn").textContent = jimmyCanSpawn() ? "Jimmy Gibbs Jr. can currently spawn" : "Jimmy Gibbs Jr. cannot currently spawn"
 	//document.getElementById("update-count").textContent = updateCount
 	
