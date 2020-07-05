@@ -28,3 +28,9 @@ h3 {
 	color: dodgerblue;
 	font-size: 36px;
 }
+
+#last-spawn-time {
+	font-weight: bold;
+	color: dodgerblue;
+	font-size: 36px;
+}
